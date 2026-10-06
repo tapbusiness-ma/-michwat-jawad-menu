@@ -323,8 +323,8 @@ const CT={
 fr:{cart:'🛒 Panier',empty:'Votre panier est vide.',total:'Total',go:'Commander →',close:'Fermer',type:'Comment souhaitez-vous recevoir votre commande ?',sur:'Sur place',emp:'À emporter',liv:'Livraison',table:'Numéro de table',name:'Nom',phone:'Téléphone',addr:'Adresse (quartier, rue...)',confirm:'Confirmer ✓',back:'← Retour',pend:'🛒 Commandes en attente',send:'📲 Envoyer sur WhatsApp',badphone:'⚠️ Numéro marocain invalide (ex : 06XXXXXXXX).',need:'⚠️ Remplissez tous les champs.',cmd:'COMMANDE',typeL:'Type',nomL:'Nom',telL:'Téléphone',adrL:'Adresse',tableL:'Table',thanks:'Merci 🙏',hello:'Bonjour 👋',added:'✓ Ajouté !'},
 ar:{cart:'🛒 السلة',empty:'السلة خاوية.',total:'المجموع',go:'كوموندي →',close:'سد',type:'كيفاش بغيتي توصلك الكوموند؟',sur:'🍽️ في البلاصة',emp:'🥡 تاخدها معاك',liv:'🚚 التوصيل',table:'رقم الطاولة',name:'السمية',phone:'التيليفون',addr:'العنوان (الحي، الزنقة...)',confirm:'أكد ✓',back:'← رجع',pend:'🛒 كوموندات كيتسناو',send:'📲 سيفط ف واتساب',badphone:'⚠️ رقم مغربي غير صحيح.',need:'⚠️ عمر جميع الخانات.',cmd:'كوموند',typeL:'النوع',nomL:'السمية',telL:'التيليفون',adrL:'العنوان',tableL:'الطاولة',thanks:'شكراً 🙏',hello:'السلام 👋',added:'✓ تزاد!'}};
 const T={
- fr:{order:'＋ Ajouter',searchPh:'Rechercher un plat...',open:'Ouvert · ferme à 22:30',closed:'Fermé · ouvre à 08:30',all:'Voir tout',reservOk:'Confirmez votre réservation :',name:'Nom',phone:'Téléphone',date:'Date',time:'Heure',guests:'personnes',send:'Envoyer'},
- ar:{order:'زيد +',searchPh:'ابحث عن طبق...',open:'مفتوح · يغلق 22:30',closed:'مغلق · يفتح 08:30',all:'الكل',reservOk:'أكد حجزك:',name:'الاسم',phone:'الهاتف',date:'التاريخ',time:'الوقت',guests:'أشخاص',send:'إرسال'}
+ fr:{order:'＋ Ajouter',searchPh:'Rechercher un plat...',open:'🟢 Ouvert',closed:'🔴 Fermé',all:'Voir tout',reservOk:'Confirmez votre réservation :',name:'Nom',phone:'Téléphone',date:'Date',time:'Heure',guests:'personnes',send:'Envoyer'},
+ ar:{order:'زيد +',searchPh:'ابحث عن طبق...',open:'🟢 مفتوح',closed:'🔴 مغلق',all:'الكل',reservOk:'أكد حجزك:',name:'الاسم',phone:'الهاتف',date:'التاريخ',time:'الوقت',guests:'أشخاص',send:'إرسال'}
 };
 /* Featured: real dishes from the menu */
 const FEAT=[
@@ -514,7 +514,7 @@ function updOpen(){
   const now=new Date(),mins=now.getHours()*60+now.getMinutes();
   const open=mins>=510&&mins<1350, tfr=LANG==='fr';
   document.getElementById('dot').classList.toggle('closed',!open);
-  document.getElementById('openTxt').textContent=open?(tfr?'🟢 Ouvert · ferme à 22:30':'🟢 مفتوح · يغلق 22:30'):(tfr?'🔴 Fermé · ouvre à 08:30':'🔴 مغلق · يفتح 08:30');
+  document.getElementById('openTxt').textContent=open?(tfr?'🟢 Ouvert':'🟢 مفتوح'):(tfr?'🔴 Fermé':'🔴 مغلق');
 }
 /* ---- language ---- */
 function setLang(l){
