@@ -68,13 +68,13 @@ section{padding:64px 0}
 .sec-desc{color:var(--muted);max-width:560px;margin:10px auto 0;font-size:15px}
 .feat-grid{display:grid;grid-template-columns:1fr;gap:16px}
 @media(min-width:700px){.feat-grid{grid-template-columns:1fr 1fr}}
-.feat{position:relative;border-radius:20px;overflow:hidden;min-height:230px;display:flex;align-items:flex-end;border:1px solid var(--line);background:var(--card)}
-.feat .bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .6s}
-.feat:hover .bg{transform:scale(1.05)}
-.feat::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(10,8,5,.93))}
-.feat-in{position:relative;z-index:2;padding:20px;width:100%}
-.feat-in h3{font-size:21px;color:var(--gold-l)}
-.feat-in .pr{font-size:19px;font-weight:700;color:#fff;margin:4px 0 12px}
+.feat{position:relative;border-radius:20px;overflow:hidden;display:flex;align-items:center;border:1px solid var(--line);background:linear-gradient(135deg,var(--card) 0%,#241a0e 100%);padding:22px;gap:16px;transition:.25s}
+.feat:hover{border-color:rgba(212,162,78,.5);transform:translateY(-3px)}
+.feat .fi{font-size:38px;flex-shrink:0}
+.feat-in{flex:1}
+.feat-in h3{font-size:19px;color:var(--gold-l)}
+.feat-in .fd{font-size:13px;color:var(--muted);margin:2px 0 6px}
+.feat-in .pr{font-size:18px;font-weight:700;color:#fff;margin:4px 0 10px}
 .mini-wa{display:inline-flex;align-items:center;gap:8px;background:var(--wa);color:#062b16;font-weight:700;font-size:13px;padding:10px 18px;border-radius:99px}
 #menu{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .search-box{position:relative;max-width:480px;margin:0 auto 18px}
@@ -285,10 +285,10 @@ const T={
 };
 /* Featured: real dishes from the menu */
 const FEAT=[
- {fr:'Ghanemi Mbakher',ar:'',price:'280 DH',img:'poster3',dfr:'La pièce signature de la maison.',dar:'قطعة الدار المميزة.'},
- {fr:'Panaché',ar:'',price:'170 DH',img:'poster2',dfr:'Assortiment de grillades.',dar:'تشكيلة مشاوٍ.'},
- {fr:'Côtelettes',ar:'',price:'200 DH',img:'team4',dfr:'Grillées au feu.',dar:'مشوية على النار.'},
- {fr:'Entrecôte Géante au Feu de Bois',ar:'',price:'140 DH',img:'poster1',dfr:'Au feu de bois.',dar:'على حطب.'}
+ {fr:'Ghanemi Mbakher',ar:'',price:'280 DH',icon:'🔥',dfr:'La pièce signature de la maison.',dar:'قطعة الدار المميزة.'},
+ {fr:'Panaché',ar:'',price:'170 DH',icon:'🍢',dfr:'Assortiment de grillades.',dar:'تشكيلة مشاوٍ.'},
+ {fr:'Côtelettes',ar:'',price:'200 DH',icon:'🥩',dfr:'Grillées au feu.',dar:'مشوية على النار.'},
+ {fr:'Entrecôte Géante au Feu de Bois',ar:'',price:'140 DH',icon:'🥩',dfr:'Au feu de bois.',dar:'على حطب.'}
 ];
 const GAL=[
  {img:'team1',fr:'Jawad El Baraka',ar:'جواد البركة'},
@@ -304,7 +304,7 @@ function orderDish(name,price){
 /* ---- render featured ---- */
 function renderFeat(){
   document.getElementById('featGrid').innerHTML=FEAT.map(f=>
-   '<div class="feat"><div class="bg" style="background-image:var(--img-'+f.img+')"></div><div class="feat-in"><h3>'+esc(f.fr)+'</h3><div class="pr">'+esc(f.price)+'</div><button class="mini-wa" onclick="orderDish(\''+escQ(f.fr)+'\',\''+escQ(f.price)+'\')">'+T[LANG].order+'</button></div></div>'
+   '<div class="feat"><div class="fi">'+f.icon+'</div><div class="feat-in"><h3>'+esc(f.fr)+'</h3><div class="fd">'+esc(LANG==='fr'?f.dfr:f.dar)+'</div><div class="pr">'+esc(f.price)+'</div><button class="mini-wa" onclick="orderDish(\''+escQ(f.fr)+'\',\''+escQ(f.price)+'\')">'+T[LANG].order+'</button></div></div>'
   ).join('');
 }
 function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;');}
