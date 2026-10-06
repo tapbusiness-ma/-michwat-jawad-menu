@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Jawad El Baraka — Boucherie & Grillades | Fès</title>
+<meta name="description" content="Boucherie Jawad El Baraka — Boucherie & Grillades à Fès. Viande fraîche, grillé au charbon. Commandez sur WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0d0d0d; --bg2:#141414; --card:#1a1a1a; --line:#2a2a2a;
+  --gold:#d4af37; --gold-l:#e8c15a; --gold-d:#9c7c1e;
+  --cream:#f5ead6; --muted:#b8a88a; --txt:#f2ede2;
+  --wa:#25D366; --wa-d:#1da851;
+  --radius:16px;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:'Cairo',system-ui,sans-serif;min-height:100vh}
+.wrap{max-width:720px;margin:0 auto}
+/* ===== TOPBAR ===== */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(13,13,13,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;padding:12px 16px}
+.brand{display:flex;align-items:center;gap:10px}
+.brand .logo{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--gold),var(--gold-d));display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 4px 14px rgba(212,175,55,.35)}
+.brand b{font-family:'Cinzel',serif;letter-spacing:1px;font-size:15px;color:var(--gold-l)}
+.brand small{display:block;font-family:'Cairo';font-size:10px;color:var(--muted);letter-spacing:2px}
+.langbtn{background:var(--card);border:1px solid var(--gold-d);color:var(--gold-l);font-family:'Cairo';font-weight:700;font-size:14px;padding:8px 14px;border-radius:999px;cursor:pointer}
+.langbtn:active{transform:scale(.95)}
+/* ===== HERO ===== */
+.hero{position:relative;overflow:hidden;text-align:center;padding:64px 20px 48px;background:
+  linear-gradient(180deg,rgba(13,13,13,.55),rgba(13,13,13,.92)),
+  url('hero.jpg') center/cover no-repeat, #1a0f08}
+.hero::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 100%,rgba(212,90,20,.22),transparent 65%);pointer-events:none}
+.hero h1{font-family:'Cinzel',serif;font-size:clamp(34px,9vw,58px);line-height:1.05;color:var(--gold-l);text-shadow:0 4px 30px rgba(212,175,55,.35);position:relative;z-index:2}
+.hero h1 .ar{display:block;font-family:'Cairo';font-size:.62em;margin-top:6px}
+.hero .slogan{margin-top:12px;font-size:16px;color:var(--cream);font-weight:600;position:relative;z-index:2}
+.hero .slogan .ar{display:block;color:var(--muted);font-size:14px;margin-top:4px}
+.badges{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:18px;position:relative;z-index:2}
+.badge{background:rgba(212,175,55,.12);border:1px solid var(--gold-d);color:var(--gold-l);font-size:12.5px;font-weight:700;padding:7px 14px;border-radius:999px}
+.cta{display:inline-block;margin-top:26px;background:linear-gradient(135deg,var(--gold-l),var(--gold));color:#1a1206;font-weight:800;font-size:17px;padding:15px 42px;border-radius:999px;text-decoration:none;box-shadow:0 8px 28px rgba(212,175,55,.4);position:relative;z-index:2}
+.cta:active{transform:scale(.96)}
+.ember{position:absolute;bottom:0;border-radius:50%;background:radial-gradient(circle,#ffcf6e,#ff7a1a 60%,transparent 70%);opacity:0;animation:rise linear infinite;z-index:1}
+@keyframes rise{0%{transform:translateY(0) scale(1);opacity:0}12%{opacity:.9}100%{transform:translateY(-340px) scale(.3);opacity:0}}
+/* ===== SPECIAL MECHOUI ===== */
+.special{margin:22px 16px 0;border-radius:var(--radius);overflow:hidden;border:1px solid var(--gold-d);background:var(--bg2)}
+.special .ph{height:170px;background:linear-gradient(180deg,rgba(13,13,13,.1),rgba(13,13,13,.75)),url('mechoui.jpg') center/cover no-repeat,#241505;display:flex;align-items:flex-end;padding:14px}
+.special .ph span{background:var(--gold);color:#1a1206;font-weight:800;font-size:13px;padding:6px 14px;border-radius:999px}
+.special .body{padding:16px}
+.special h2{font-family:'Cinzel',serif;color:var(--gold-l);font-size:22px}
+.special h2 .ar{font-family:'Cairo';font-size:16px;color:var(--muted);display:block;margin-top:2px}
+.special p{color:var(--cream);font-size:14px;margin-top:8px;line-height:1.6}
+/* ===== BUTCHER BANNER ===== */
+.butcher{margin:22px 16px 0;background:linear-gradient(135deg,#3a2408,#1c1206);border:1px dashed var(--gold-d);border-radius:var(--radius);padding:18px;text-align:center}
+.butcher .t{font-size:26px}
+.butcher b{color:var(--gold-l);font-size:16px;display:block;margin-top:6px}
+.butcher span{color:var(--muted);font-size:13px}
+/* ===== CAT NAV ===== */
+.catnav{position:sticky;top:64px;z-index:40;background:rgba(13,13,13,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:10px 0}
+.catnav .row{display:flex;gap:8px;overflow-x:auto;padding:0 16px;scrollbar-width:none}
+.catnav .row::-webkit-scrollbar{display:none}
+.catnav a{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;gap:3px;background:var(--card);border:1px solid var(--line);color:var(--cream);text-decoration:none;font-size:11px;font-weight:700;padding:9px 13px;border-radius:12px;min-width:64px}
+.catnav a .ic{font-size:20px}
+.catnav a.on{border-color:var(--gold);background:rgba(212,175,55,.14);color:var(--gold-l)}
+/* ===== MENU ===== */
+#menu{padding:6px 16px 10px}
+.cat{margin-top:26px;scroll-margin-top:130px}
+.cat>h2{display:flex;align-items:center;gap:10px;font-size:21px;color:var(--gold-l);font-family:'Cinzel',serif;margin-bottom:4px}
+.cat>h2 .ar{font-family:'Cairo';font-size:15px;color:var(--muted);font-weight:600}
+.cat .count{margin-left:auto;font-size:11px;color:var(--muted);background:var(--card);border:1px solid var(--line);padding:3px 10px;border-radius:999px;font-family:'Cairo'}
+.items{display:flex;flex-direction:column;gap:10px;margin-top:12px}
+.item{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px;display:flex;gap:12px;align-items:center}
+.item .info{flex:1;min-width:0}
+.item .fr{font-weight:700;font-size:15.5px;color:var(--txt);line-height:1.35}
+.item .ar{font-size:13.5px;color:var(--muted);margin-top:3px;line-height:1.7}
+.item .desc{font-size:12.5px;color:var(--muted);margin-top:4px;line-height:1.6}
+.item .side{display:flex;flex-direction:column;align-items:flex-end;gap:8px;flex-shrink:0}
+.price{color:var(--gold-l);font-weight:800;font-size:16px;white-space:nowrap;background:rgba(212,175,55,.1);border:1px solid var(--gold-d);padding:5px 12px;border-radius:999px}
+.order{background:var(--wa);color:#fff;font-weight:800;font-size:13px;border:none;padding:9px 16px;border-radius:999px;cursor:pointer;display:flex;align-items:center;gap:6px;font-family:'Cairo'}
+.order:active{transform:scale(.94);background:var(--wa-d)}
+/* ===== CONTACT ===== */
+.contact{margin:30px 16px 0;background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:22px;text-align:center}
+.contact h2{font-family:'Cinzel',serif;color:var(--gold-l);font-size:20px;margin-bottom:6px}
+.contact .addr{color:var(--muted);font-size:14px;margin:8px 0 16px;line-height:1.7}
+.cbtns{display:flex;flex-direction:column;gap:10px}
+.cbtn{display:flex;align-items:center;justify-content:center;gap:10px;padding:14px;border-radius:14px;font-weight:800;font-size:16px;text-decoration:none;font-family:'Cairo'}
+.cbtn.wa{background:var(--wa);color:#fff}
+.cbtn.call{background:var(--card);border:1px solid var(--gold-d);color:var(--gold-l)}
+.cbtn.maps{background:var(--card);border:1px solid var(--line);color:var(--cream)}
+.cbtn:active{transform:scale(.97)}
+.delivery{margin-top:14px;color:var(--muted);font-size:13px}
+/* ===== FOOTER ===== */
+footer{margin-top:26px;border-top:1px solid var(--line);padding:26px 16px 40px;text-align:center}
+.socials{display:flex;gap:12px;justify-content:center;margin-bottom:16px}
+.socials a{width:46px;height:46px;border-radius:14px;background:var(--card);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:22px;text-decoration:none}
+footer .tb{margin-top:14px;font-size:13px;color:var(--muted)}
+footer .tb a{color:var(--gold-l);font-weight:700;text-decoration:none}
+.fbrand{font-family:'Cinzel',serif;color:var(--gold);font-size:14px;letter-spacing:2px;margin-bottom:4px}
+/* AR mode: primary/secondary swap handled by JS re-render */
+body[data-lang="ar"] .item .fr{font-size:13.5px;color:var(--muted);font-weight:600}
+body[data-lang="ar"] .item .ar{font-size:15.5px;color:var(--txt);font-weight:700}
+</style>
+</head>
+<body data-lang="fr">
+<div class="wrap">
+
+<header class="topbar"><div class="wrap" style="max-width:720px">
+  <div class="brand">
+    <div class="logo">🥩</div>
+    <div><b>JAWAD EL BARAKA</b><small>BOUCHERIE &amp; GRILLADES</small></div>
+  </div>
+  <button class="langbtn" id="langBtn" type="button">عربي</button>
+</div></header>
+
+<section class="hero" id="hero">
+  <h1>JAWAD EL BARAKA<span class="ar">مشواة جواد البركة</span></h1>
+  <p class="slogan">Le goût authentique de la grillade 🔥<span class="ar">المذاق الأصيل للمشاوي</span></p>
+  <div class="badges">
+    <span class="badge">✅ 100% Halal</span>
+    <span class="badge">🥩 Viande fraîche du jour</span>
+    <span class="badge">🔥 Grillé au charbon</span>
+  </div>
+  <a class="cta" href="#menu" data-i18n="cta">Voir le menu</a>
+</section>
+
+<section class="special">
+  <div class="ph"><span data-i18n="specBadge">⭐ SPÉCIALITÉ DE LA MAISON</span></div>
+  <div class="body">
+    <h2>Méchoui Jawad El Baraka<span class="ar">مشوي جواد البركة</span></h2>
+    <p data-i18n="specText">Notre méchoui cuit lentement à la braise, préparé chaque matin avec une viande fraîche sélectionnée par nos bouchers. Le plat qui a fait notre réputation à Fès.</p>
+  </div>
+</section>
+
+<div class="butcher">
+  <div class="t">🥩 → 🔥</div>
+  <b data-i18n="butcherT">Boucherie → Grill : choisissez, on vous grille !</b>
+  <span data-i18n="butcherS">L'7em fresh dyal nhar — khtar w nchwiw lik</span>
+</div>
+
+<nav class="catnav"><div class="row" id="catNav"></div></nav>
+
+<main id="menu"></main>
+
+<section class="contact">
+  <h2 data-i18n="contactT">Nous trouver</h2>
+  <p class="addr">📍 Route Ain Chkef, Fès<br><span data-i18n="hours">Ouvert tous les jours</span> • 🛵 <span data-i18n="deliv">Livraison rapide</span></p>
+  <div class="cbtns">
+    <a class="cbtn wa" href="https://wa.me/212661417498?text=Salam%20!%20Bghit%20ncommandi%20swiya%20🍽️">💬 <span data-i18n="orderWA">Commander sur WhatsApp</span></a>
+    <a class="cbtn call" href="tel:+212661417498">📞 0661-417498</a>
+    <a class="cbtn maps" href="https://maps.app.goo.gl/P5HGWAPYCLsdMYuC9" target="_blank" rel="noopener">🗺️ <span data-i18n="maps">Itinéraire Google Maps</span></a>
+  </div>
+  <p class="delivery" data-i18n="delivNote">Viande fraîche • Qualité supérieure • Service de confiance</p>
+</section>
+
+<footer>
+  <div class="fbrand">JAWAD EL BARAKA</div>
+  <div class="socials">
+    <a href="https://www.instagram.com/michwat_jawad_lbaraka" target="_blank" rel="noopener" title="Instagram">📸</a>
+    <a href="https://www.tiktok.com/@michwat_jawad_lbaraka" target="_blank" rel="noopener" title="TikTok">🎵</a>
+    <a href="https://www.facebook.com/share/14ojbQV7dMD/" target="_blank" rel="noopener" title="Facebook">👍</a>
+  </div>
+  <p class="tb"><span data-i18n="madeBy">Menu réalisé par</span> <a href="https://marwanelkarradi-art.github.io/Tapbusiness-site/" target="_blank" rel="noopener">TAPBusiness.ma</a></p>
+</footer>
+
+</div>
+<script>
+const MENU = [{"ar": "اللحوم", "fr": "Viandes", "icon": "🥩", "items": [{"ar": "", "fr": "Ghanemi mbakher", "price": "280 DH"}, {"ar": "", "fr": "Rass mbekhr", "price": "100 DH"}]}, {"ar": "المشويات", "fr": "Les Grillades", "icon": "🔥", "items": [{"ar": "", "fr": "Viande Hachée", "price": "140 DH"}, {"ar": "", "fr": "Foie (Kebda)", "price": "200 DH"}, {"ar": "", "fr": "Côtelettes", "price": "200 DH"}, {"ar": "", "fr": "Saucisse Maison", "price": "140 DH"}, {"ar": "", "fr": "Saucisse Fromage", "price": "140 DH"}, {"ar": "", "fr": "Saucisse De Foie", "price": "140 DH"}, {"ar": "", "fr": "Saucisse De Dinde", "price": "140 DH"}, {"ar": "", "fr": "Brochettes De Dinde", "price": "120 DH"}, {"ar": "", "fr": "Brochettes De Poulet", "price": "120 DH"}, {"ar": "", "fr": "Cuisse De Poulet", "price": "100 DH"}, {"ar": "", "fr": "Cuisse De Poulet (BBQ)", "price": "120 DH"}, {"ar": "", "fr": "Panaché", "price": "170 DH"}, {"ar": "", "fr": "Poulet Daghmira", "price": "180 DH"}, {"ar": "", "fr": "Louri", "price": "180 DH"}, {"ar": "", "fr": "Cœur", "price": "180 DH"}, {"ar": "", "fr": "Rognons", "price": "180 DH"}, {"ar": "", "fr": "Boulfaf", "price": "200 DH"}]}, {"ar": "إضافات", "fr": "Suppléments", "icon": "➕", "items": [{"ar": "خبز", "fr": "Pain", "price": "2 DH"}, {"ar": "خبز تافرنوت", "fr": "Pain Tafrnout", "price": "10 DH"}, {"ar": "سلطة", "fr": "Salade", "price": "10 DH"}, {"ar": "بطاطس", "fr": "Frites", "price": "10 DH"}, {"ar": "صلصة", "fr": "Sauce", "price": "5 DH"}]}, {"ar": "الطواجن", "fr": "Tajines", "icon": "🍲", "items": [{"ar": "طاجين البقر - الغنم بالبرقوق و الزبيب", "fr": "Tajine de Bœuf-Mouton, Pruneaux et Raisins secs", "price": "100 DH"}, {"ar": "طاجين البقر - الغنم صغير بالبرقوق و الزبيب", "fr": "Mini Tajine de Bœuf-Mouton, Pruneaux et Raisins secs", "price": "60 DH"}, {"ar": "طاجين الدجاج البلدي بالبرقوق و الزبيب", "fr": "Tajine Poulet Beldi, Pruneaux et Raisins secs", "price": "120 DH"}, {"ar": "طاجين الجلبانة و القوق", "fr": "Tajine Petit Pois et Artichaut", "price": "120 DH"}, {"ar": "طاجين بيل بيل", "fr": "Tajine Pil Pil", "price": "60 DH"}, {"ar": "طاجين الكفتة", "fr": "Tajine Viande Hachée", "price": "70 - 100 DH"}, {"ar": "طاجين الكبدة", "fr": "Tajine Foie", "price": "90 - 130 DH"}, {"ar": "طاجين المخ", "fr": "Tajine Mékh", "price": "50 - 100 DH"}, {"ar": "طاجين الصوصيص", "fr": "Tajine Saucisse", "price": "50 - 100 DH"}, {"ar": "طاجين مشكل", "fr": "Tajine Panaché", "price": "60 - 100 DH"}, {"ar": "طاجين إختياري", "fr": "Tajine Au Choix", "price": "60 - 100 DH"}]}, {"ar": "الدجاج", "fr": "Poulet", "icon": "🍗", "items": [{"ar": "دجاج روتي", "fr": "Poulet Roti", "price": "120 DH"}, {"ar": "دجاج مبخر", "fr": "Poulet Mbekhr", "price": "140 DH"}, {"ar": "دجاج دغميرة", "fr": "Poulet Daghmira", "price": "180 DH"}, {"ar": "دجاج 1/2", "fr": "Poulet 1/2", "price": "70 DH"}, {"ar": "دجاج 1/4", "fr": "Poulet 1/4", "price": "35 DH"}]}, {"ar": "الجمعة مميزة", "fr": "Spécial Vendredi", "icon": "⭐", "items": [{"ar": "كسكس باللحم + لبن", "fr": "Couscous Viande + Lben", "price": "50 DH"}, {"ar": "كسكس بالدجاج + لبن", "fr": "Couscous Poulet + Lben", "price": "50 DH"}]}, {"ar": "سلطات", "fr": "Salades", "icon": "🥗", "items": [{"ar": "سلطة منزلية", "fr": "Salade Maison", "price": "50 DH"}, {"ar": "سلطة نيسواز", "fr": "Salade Niçoise", "price": "50 DH"}, {"ar": "سلطة سيزار", "fr": "Salade César", "price": "60 DH"}, {"ar": "سلطة الشاف", "fr": "Salade Du Chef", "price": "100 DH"}]}, {"ar": "سلطات مغربية", "fr": "Salades Marocaines", "icon": "🥗", "items": [{"ar": "سلطة مغربية", "fr": "Salade Marocaine", "price": "10 DH"}, {"ar": "زعلوك", "fr": "Zaalouk", "price": "10 DH"}, {"ar": "تكتوكة", "fr": "Tektouka", "price": "10 DH"}, {"ar": "الغياتية", "fr": "Ghiyatiya", "price": "10 DH"}, {"ar": "بقولة / رجلة", "fr": "Bekoula / Rejla", "price": "10 DH"}, {"ar": "بطاطس", "fr": "Pomme De Terre", "price": "10 DH"}, {"ar": "جزر مشرمل", "fr": "Carotte Mchermel", "price": "10 DH"}, {"ar": "شفلور مشرمل", "fr": "Chiflour Mchermel", "price": "10 DH"}]}, {"ar": "مرافقات", "fr": "Accompagnements", "icon": "🍟", "items": [{"ar": "خبز تفرنوت", "fr": "Pain Tafrnout", "price": "10 DH"}, {"ar": "بطاطس مقلية", "fr": "Frites", "price": "10 DH"}, {"ar": "شاي", "fr": "Thé Moyen", "price": "15 DH"}, {"ar": "شاي كبير", "fr": "Thé Grand", "price": "20 DH"}, {"ar": "ماء معدني 0.5 ل", "fr": "Eau Minérale 0.5 L", "price": "5 DH"}, {"ar": "ماء معدني 1 ل", "fr": "Eau Minérale 1 L", "price": "10 DH"}, {"ar": "صودا", "fr": "Soda", "price": "16 DH"}]}, {"ar": "المقبلات", "fr": "Nos Entrées", "icon": "🍽️", "items": [{"ar": "", "fr": "Harira Marocaine", "price": "15 DH"}, {"ar": "", "fr": "Salade Niçoise", "price": "50 DH"}, {"ar": "", "fr": "Zaalouk", "price": "10 DH"}, {"ar": "", "fr": "Tektouka", "price": "10 DH"}, {"ar": "", "fr": "Ghiyatiya", "price": "10 DH"}, {"ar": "", "fr": "Bekoula / Rejla", "price": "10 DH"}, {"ar": "أفوكادو، قمرون، سلطة خضراء، صلصة كوكتيل", "fr": "Salade Avocat aux Crevettes", "price": "55 DH"}, {"ar": "", "fr": "La Soupe Thaïlandaise", "price": "25 DH"}, {"ar": "", "fr": "La Soupe Vietnamienne", "price": "25 DH"}]}, {"ar": "الركن المغربي", "fr": "Coin Marocain", "icon": "🇲🇦", "items": [{"ar": "فواكه البحر، ورقة البسطيلة، صلصة الصويا، صلصة المحار، حامض مصير، هريسة، شعرية صينية، فطر أسود", "fr": "Pastilla aux Fruits de Mer", "price": "40 DH"}, {"ar": "دجاج، لوز، قرفة، بصل، معدنوس، ورقة البسطيلة", "fr": "Pastilla au Poulet et Amandes", "price": "35 DH"}, {"ar": "دجاج، بصل، ثوم، حامض مصير، زيت الزيتون، زيتون", "fr": "Tajine de Poulet aux Olives et Citrons", "price": "100 DH"}, {"ar": "بقر، برقوق، زنجلان، عسل، بصل، ثوم، بيض", "fr": "Tajine de Bœuf aux Pruneaux et Sésame", "price": "100 DH"}]}, {"ar": "أطباق مميزة", "fr": "Nos Plats Spéciaux", "icon": "👨‍🍳", "items": [{"ar": "فيليه الدجاج، فطر، شالوت، ثوم، كريمة، زيت الزيتون، زبدة، صلصة بنية + بطاطس و خضر", "fr": "Émincé de Poulet aux Champignons", "price": "90 DH"}, {"ar": "فيليه البقر، شالوت، زبدة، كريمة، صلصة بنية + بطاطس و خضر", "fr": "Médaillon de Filet de Bœuf Grillé", "price": "140 DH"}, {"ar": "أنتروكوت 280غ، زبدة، شالوت، ثوم، زيت الزيتون + بطاطس و خضر", "fr": "Entrecôte Géante au Feu de Bois", "price": "140 DH"}, {"ar": "ريش الغنم، أعشاب بروفانس + بطاطس و خضر", "fr": "Côte d'Agneau Grillée à la Provençale", "price": "140 DH"}, {"ar": "فيليه البقر، فطر، شالوت، ثوم، كريمة، زيت الزيتون، زبدة، صلصة بنية + بطاطس و خضر", "fr": "Émincé de Bœuf aux Champignons", "price": "140 DH"}]}, {"ar": "برجر", "fr": "Nos Burgers", "icon": "🍔", "items": [{"ar": "ستيك بقر مفروم، بيض، جبن شيدر مضاعف، كورنيشون، طماطم، بصل، سلطة، صلصة منزلية", "fr": "Al Baraka Burger", "price": "50 DH"}, {"ar": "ستيك بقر مفروم، جبن شيدر، كورنيشون، طماطم، بصل، سلطة، صلصة منزلية", "fr": "Chasse Burger", "price": "40 DH"}, {"ar": "كوردون بلو، جبن شيدر، كورنيشون، طماطم، بصل، سلطة، صلصة منزلية", "fr": "Burger Cordon Bleu", "price": "40 DH"}, {"ar": "دجاج مشوي، جبن شيدر، سلطة خضراء، كورنيشون، طماطم، بصل، صلصة منزلية", "fr": "Sandwich Poulet", "price": "35 DH"}]}, {"ar": "سندويشات", "fr": "Nos Sandwichs", "icon": "🥪", "items": [{"ar": "لحم مفروم مشوي، جبن شيدر، كورنيشون، طماطم، بصل، سلطة خضراء، صلصة منزلية", "fr": "Sandwich Kafta", "price": "40 DH"}, {"ar": "تونة، جبن شيدر، كورنيشون، طماطم، بصل، سلطة خضراء، صلصة منزلية", "fr": "Sandwich aux Thons", "price": "40 DH"}, {"ar": "دجاج مشوي، جبن شيدر، سلطة خضراء، كورنيشون، طماطم، بصل، صلصة منزلية", "fr": "Panini Poulet", "price": "40 DH"}, {"ar": "لحم مفروم مشوي، جبن شيدر، كورنيشون، طماطم، بصل، سلطة خضراء، صلصة منزلية", "fr": "Panini Kafta", "price": "40 DH"}, {"ar": "تونة، جبن شيدر، كورنيشون، طماطم، بصل، سلطة خضراء، صلصة منزلية", "fr": "Panini aux Thons", "price": "40 DH"}, {"ar": "قمرون، كالامار، بلح البحر، جبن شيدر، كورنيشون، طماطم، بصل، سلطة خضراء، صلصة منزلية", "fr": "Panini Fruits de Mer", "price": "40 DH"}, {"ar": "لحم مفروم مشوي، جبن شيدر، كورنيشون، طماطم، بصل، سلطة خضراء، صلصة منزلية", "fr": "Panini Viande Hachée", "price": "40 DH"}, {"ar": "جامبون، ديك رومي، جبن شيدر، كورنيشون، طماطم، بصل، سلطة خضراء، صلصة منزلية", "fr": "Panini Charcuterie", "price": "40 DH"}]}, {"ar": "طاكوس", "fr": "Nos Tacos", "icon": "🌮", "items": [{"ar": "دجاج مشوي، بطاطس، سلطة خضراء، طماطم، بصل، صلصة منزلية", "fr": "Tacos Poulet", "price": "40 DH"}, {"ar": "لحم مفروم، بطاطس، سلطة خضراء، طماطم، بصل، صلصة منزلية", "fr": "Tacos Kafta", "price": "40 DH"}, {"ar": "دجاج، لحم مفروم، بطاطس، سلطة خضراء، طماطم، بصل، صلصة منزلية", "fr": "Tacos Mixtes", "price": "45 DH"}, {"ar": "قمرون، كالامار، بلح البحر، بطاطس، سلطة خضراء، طماطم، بصل، صلصة منزلية", "fr": "Tacos Fruits de Mer", "price": "60 DH"}, {"ar": "كوردون بلو، بطاطس، سلطة خضراء، طماطم، بصل، صلصة منزلية", "fr": "Tacos Cordon Bleu", "price": "40 DH"}, {"ar": "حسب الاختيار: دجاج، لحم مفروم أو مشكل، بطاطس، صلصة الجبن المنزلية", "fr": "Tacos Gratiné au Choix", "price": "50 DH"}]}, {"ar": "باستيشيو", "fr": "Nos Pasticcio", "icon": "🧀", "items": [{"ar": "دجاج، بطاطس، صلصة طماطم، بيشاميل، جبن", "fr": "Pasticcio Poulet", "price": "45 DH"}, {"ar": "لحم مفروم، بطاطس، صلصة طماطم، بيشاميل، جبن", "fr": "Pasticcio Viande Hachée", "price": "45 DH"}, {"ar": "لحم مفروم، دجاج، بطاطس، صلصة طماطم، بيشاميل، جبن", "fr": "Pasticcio Mixte", "price": "45 DH"}, {"ar": "بيني، صلصة طماطم، جبن، بيشاميل", "fr": "Pasticcio Pâte Penne", "price": "45 DH"}]}, {"ar": "إضافات المطبخ", "fr": "Supplément Cuisine", "icon": "🍳", "items": [{"ar": "", "fr": "Pomme Frite", "price": "10 DH"}, {"ar": "", "fr": "Thon", "price": "15 DH"}, {"ar": "", "fr": "Champignons", "price": "15 DH"}, {"ar": "", "fr": "Garniture", "price": "15 DH"}, {"ar": "", "fr": "Sauce Algérienne / Biggy / Andalou", "price": "10 DH"}, {"ar": "", "fr": "Nugette de Poulet (7 pcs)", "price": "20 DH"}, {"ar": "مقرمش زيادة", "fr": "Poulet Crispy", "price": "60 DH"}]}, {"ar": "فورمول", "fr": "Formules", "icon": "🎁", "items": [{"ar": "ميني برجر + ميني عصير برتقال أو صودا", "fr": "Formule Burger", "price": "50 DH"}, {"ar": "كريب نوتيلا موز + ميني عصير برتقال أو صودا", "fr": "Formule Crêpe", "price": "40 DH"}, {"ar": "ناجتس الدجاج + ميني عصير برتقال أو صودا", "fr": "Formule Nugget", "price": "40 DH"}]}, {"ar": "باط", "fr": "Pâtes", "icon": "🍝", "items": [{"ar": "", "fr": "Pâte Bolognaise", "price": "50 DH"}, {"ar": "", "fr": "Pâte Forestière", "price": "45 DH"}, {"ar": "", "fr": "Pâte Fruit de Mer", "price": "55 DH"}, {"ar": "", "fr": "Pâte à l'Arabiatta", "price": "35 DH"}]}, {"ar": "بيتزا", "fr": "Nos Pizzas", "icon": "🍕", "items": [{"ar": "", "fr": "Pizza Margherita", "price": "35 DH"}, {"ar": "", "fr": "Pizza Végétarienne", "price": "35 DH"}, {"ar": "", "fr": "Pizza Quatre Saisons", "price": "70 DH"}, {"ar": "", "fr": "Pizza Fruits de Mer", "price": "75 DH"}, {"ar": "", "fr": "Pizza Al Baraka", "price": "70 DH"}, {"ar": "", "fr": "Pizza 4 Fromages", "price": "50 DH"}, {"ar": "", "fr": "Pizza Pepperoni", "price": "50 DH"}, {"ar": "", "fr": "Pizza Thon", "price": "50 DH"}]}, {"ar": "كريب مالح", "fr": "Crêpes Salées", "icon": "🥞", "items": [{"ar": "", "fr": "Crêpe Fromage", "price": "30 DH"}, {"ar": "", "fr": "Crêpe Charcuterie", "price": "35 DH"}, {"ar": "", "fr": "Crêpe Dinde ou Viande Hachée", "price": "40 DH"}, {"ar": "ش charcuterie / ديك رومي / لحم مفروم", "fr": "Crêpe Mixte", "price": "50 DH"}]}, {"ar": "كريب حلو", "fr": "Crêpes Sucrées", "icon": "🍫", "items": [{"ar": "", "fr": "Crêpe Nutella", "price": "28 DH"}, {"ar": "", "fr": "Crêpe Nutella Banane", "price": "30 DH"}, {"ar": "", "fr": "Crêpe Oreo", "price": "32 DH"}, {"ar": "", "fr": "Crêpe Kinder", "price": "37 DH"}, {"ar": "", "fr": "Crêpe Lotus", "price": "35 DH"}, {"ar": "", "fr": "Crêpe Kitkat", "price": "37 DH"}, {"ar": "", "fr": "Crêpe Pistache", "price": "35 DH"}, {"ar": "", "fr": "Crêpe Kunafa", "price": "40 DH"}, {"ar": "", "fr": "Crêpe Fruits Secs", "price": "30 DH"}, {"ar": "", "fr": "Crêpe Amlou", "price": "28 DH"}, {"ar": "", "fr": "Crêpe El Ibarak", "price": "60 DH"}]}, {"ar": "مشروبات ساخنة", "fr": "Boissons Chaudes", "icon": "☕", "items": [{"ar": "", "fr": "Café Crème", "price": "18 DH"}, {"ar": "", "fr": "Café Noir", "price": "14 DH"}, {"ar": "", "fr": "Capuchino", "price": "18 DH"}, {"ar": "", "fr": "Café American", "price": "15 DH"}, {"ar": "", "fr": "Double Nespresso", "price": "16 DH"}, {"ar": "", "fr": "Café Nespresso", "price": "20 DH"}, {"ar": "", "fr": "Lait Chaud", "price": "10 DH"}, {"ar": "", "fr": "Chocolat Chaud", "price": "15 DH"}, {"ar": "", "fr": "Verveine au Lait", "price": "15 DH"}, {"ar": "", "fr": "Thé Marocain", "price": "14 DH"}, {"ar": "", "fr": "Thé Noir", "price": "15 DH"}]}, {"ar": "عصائر طبيعية", "fr": "Jus Naturels", "icon": "🧃", "items": [{"ar": "", "fr": "Jus Orange", "price": "20 DH"}, {"ar": "", "fr": "Jus Citron", "price": "20 DH"}, {"ar": "", "fr": "Jus Banane", "price": "25 DH"}, {"ar": "", "fr": "Jus Ananas", "price": "35 DH"}, {"ar": "", "fr": "Jus Mangue", "price": "30 DH"}, {"ar": "", "fr": "Jus Fraise", "price": "30 DH"}, {"ar": "", "fr": "Jus Avocat", "price": "30 DH"}, {"ar": "", "fr": "Cocktail au Choix", "price": "35 DH"}, {"ar": "", "fr": "Limonade au Choix", "price": "16 DH"}]}, {"ar": "موكtails", "fr": "Mocktails", "icon": "🍹", "items": [{"ar": "", "fr": "Pina Colada", "price": "40 DH"}, {"ar": "", "fr": "Bora Bora", "price": "40 DH"}, {"ar": "", "fr": "Rainbow", "price": "40 DH"}, {"ar": "", "fr": "Mojito Vergine", "price": "40 DH"}, {"ar": "", "fr": "Mojito Aromatisé", "price": "40 DH"}, {"ar": "", "fr": "Mojito Blueberry", "price": "40 DH"}, {"ar": "", "fr": "Mojito Rose Berry", "price": "40 DH"}, {"ar": "", "fr": "Mojito Redbull", "price": "50 DH"}]}];
+const WA = "https://wa.me/212661417498?text=";
+const I18N = {
+  fr:{cta:"Voir le menu",specBadge:"⭐ SPÉCIALITÉ DE LA MAISON",specText:"Notre méchoui cuit lentement à la braise, préparé chaque matin avec une viande fraîche sélectionnée par nos bouchers. Le plat qui a fait notre réputation à Fès.",butcherT:"Boucherie → Grill : choisissez, on vous grille !",butcherS:"L'7em fresh dyal nhar — khtar w nchwiw lik",contactT:"Nous trouver",hours:"Ouvert tous les jours",deliv:"Livraison rapide",orderWA:"Commander sur WhatsApp",maps:"Itinéraire Google Maps",delivNote:"Viande fraîche • Qualité supérieure • Service de confiance",madeBy:"Menu réalisé par",order:"Commander",toggle:"عربي"},
+  ar:{cta:"شوف المينيو",specBadge:"⭐ تخصص الدار",specText:"المشوي ديالنا طايب على مهل على الجمر، كنوجدو كل صباح بلحم طازج مختار من عند الجزارة ديالنا. هو الطبق اللي شهرنا في فاس.",butcherT:"من الجزارة للشواية : ختار وحنا نشويو ليك !",butcherS:"اللحم طازج ديال النهار — ختار وحنا نشويو ليك",contactT:"فين تلقانا",hours:"محلول كل نهار",deliv:"توصيل سريع",orderWA:"طلب عبر واتساب",maps:"الاتجاهات على Google Maps",delivNote:"لحم طازج • جودة عالية • خدمة مضمونة",madeBy:"مينيو من إنجاز",order:"طلب",toggle:"FR"}
+};
+let lang = "fr";
+const $ = s => document.querySelector(s);
+
+function itemHTML(it){
+  const fr = it.fr || "", ar = (it.ar || "").trim();
+  const isDesc = ar.length > 70;
+  const arName = (!isDesc && ar) ? ar : "";
+  const desc = isDesc ? ar : "";
+  const primary = (lang === "ar" && arName) ? arName : fr;
+  const secondary = (lang === "ar") ? (arName ? fr : "") : arName;
+  const waText = encodeURIComponent("Salam, bghit ncommandi: " + fr + " (" + it.price + ")");
+  return `<div class="item">
+    <div class="info">
+      <div class="${(lang==='ar'&&arName)?'ar':'fr'}">${esc(primary)}</div>
+      ${secondary ? `<div class="${(lang==='ar')?'fr':'ar'}">${esc(secondary)}</div>` : ""}
+      ${desc ? `<div class="desc">${esc(desc)}</div>` : ""}
+    </div>
+    <div class="side">
+      <span class="price">${esc(it.price)}</span>
+      <button class="order" type="button" onclick="window.open('${WA}'+'${waText}','_blank')">💬 ${I18N[lang].order}</button>
+    </div>
+  </div>`;
+}
+function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}
+function render(){
+  document.body.dataset.lang = lang;
+  document.querySelectorAll("[data-i18n]").forEach(el=>{
+    const k = el.getAttribute("data-i18n");
+    if(I18N[lang][k]) el.textContent = I18N[lang][k];
+  });
+  $("#langBtn").textContent = I18N[lang].toggle;
+  // nav
+  $("#catNav").innerHTML = MENU.map((c,i)=>
+    `<a href="#cat-${i}" data-cat="${i}"><span class="ic">${c.icon||"🍽️"}</span><span>${esc(lang==="ar"?c.ar:c.fr)}</span></a>`
+  ).join("");
+  // sections
+  $("#menu").innerHTML = MENU.map((c,i)=>{
+    const title = lang==="ar" ? c.ar : c.fr, sub = lang==="ar" ? c.fr : c.ar;
+    return `<section class="cat" id="cat-${i}">
+      <h2><span class="ic">${c.icon||"🍽️"}</span> ${esc(title)} <span class="ar">${esc(sub)}</span><span class="count">${c.items.length}</span></h2>
+      <div class="items">${c.items.map(itemHTML).join("")}</div>
+    </section>`;
+  }).join("");
+  spy();
+}
+$("#langBtn").addEventListener("click",()=>{lang = lang==="fr"?"ar":"fr"; render();});
+// scroll spy
+let obs;
+function spy(){
+  if(obs) obs.disconnect();
+  const links = document.querySelectorAll("#catNav a");
+  obs = new IntersectionObserver(es=>{
+    es.forEach(e=>{
+      if(e.isIntersecting){
+        links.forEach(l=>l.classList.toggle("on", l.getAttribute("href")==="#"+e.target.id));
+      }
+    });
+  },{rootMargin:"-40% 0px -55% 0px"});
+  document.querySelectorAll(".cat").forEach(s=>obs.observe(s));
+}
+// embers
+(function(){
+  const hero = $("#hero");
+  for(let i=0;i<14;i++){
+    const s = document.createElement("span");
+    s.className = "ember";
+    const sz = 4+Math.random()*8;
+    s.style.cssText = `left:${5+Math.random()*90}%;width:${sz}px;height:${sz}px;animation-duration:${3+Math.random()*4}s;animation-delay:${Math.random()*4}s`;
+    hero.appendChild(s);
+  }
+})();
+render();
+</script>
+</body>
+</html>
